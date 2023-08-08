@@ -13,16 +13,16 @@ def print_trainable_parameters(model):
     )
 
 
-def create_prompt_squad_v2(context, question, answer):
-    try:
-        if len(answer) < 1:
-            answer = "Cannot Find Answer"
-        else:
-            answer = answer
-    except:
-        answer = "Cannot Find Answer"
-    prompt_template = f"### CONTEXT\n{context}\n\n### QUESTION\n{question}\n\n### ANSWER\n{answer}</s>"
-    return prompt_template
+# def create_prompt_qa(context, question, answer):
+#     try:
+#         if len(answer) < 1:
+#             answer = "Cannot Find Answer"
+#         else:
+#             answer = answer
+#     except:
+#         answer = "Cannot Find Answer"
+#     prompt_template = f"### CONTEXT\n{context}\n\n### QUESTION\n{question}\n\n### ANSWER\n{answer}</s>"
+#     return prompt_template
 
 # def create_prompt(template, validation_rules, **variables):
 #     """
@@ -75,7 +75,3 @@ def create_prompt_squad_v2(context, question, answer):
 
 # prompt = create_prompt(template, validation_rules, **input_variables)
 # print(prompt)
-
-
-
-
